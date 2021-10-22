@@ -14,8 +14,6 @@ export function InputRound (props: InputRoundProps) {
     return (
       <View>
          <Input placeholder={props.placeholder}
-          //value={email}
-          //onChangeText={texto => setEmail(texto)}
           leftIcon={{name:props.icone, color:"black"}}
           secureTextEntry={props.senha} 
           onBlur={props.onBlur} 

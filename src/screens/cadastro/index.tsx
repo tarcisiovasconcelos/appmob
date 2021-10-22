@@ -17,12 +17,7 @@ export function Cadastro (props: CadastroProps) {
     return (
       <ImageBackground source={require('./../../assets/imgs/bg2.png')}
                             style={styles.background}>
-      <View style={styles.container}>
-        <TouchableOpacity onPress={() => nav.navigate('Tela-Login')}>
-        <Text style={styles.criarcontalogin}>Ja possui uma conta? Clique aqui para realizar login.</Text>
-        </TouchableOpacity>
-        <StatusBar style="dark"/>
-      </View>
+      
       <View style={styles.container2}>
 
         <Text style={styles.texta}>Cadastre-se</Text>
@@ -49,6 +44,12 @@ export function Cadastro (props: CadastroProps) {
         />
         <Button title="Cadastrar" buttonStyle={{borderRadius: 30, backgroundColor: '#1C3144', marginTop: 10}}></Button>
       </View>
+      <View style={styles.container}>
+        <TouchableOpacity onPress={() => nav.navigate('Tela-Login')}>
+        <Text style={styles.criarcontalogin}>Ja possui uma conta? Clique aqui para realizar login.</Text>
+        </TouchableOpacity>
+        <StatusBar style="dark"/>
+      </View>
       </ImageBackground>
     );
 }
@@ -62,9 +63,9 @@ background: {
 container: {
   flex:1,
   flexDirection: 'column',
-  justifyContent: 'center',
-  padding: 20,
-  alignItems: 'stretch' 
+  justifyContent: 'flex-end',
+  padding: 10,
+  alignItems: 'center' 
 },
 
 texta: {
@@ -76,7 +77,7 @@ texta: {
 },
 
 container2: {
-  flex:1,
+  flex:50,
   flexDirection: 'column',
   justifyContent: 'center',
   padding: 20,

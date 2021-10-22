@@ -34,12 +34,7 @@ export function Login (props: LoginProps) {
     return (
       <ImageBackground source={require('./../../assets/imgs/bg2.png')}
                             style={styles.background}>
-      <View style={styles.container}>
-        <TouchableOpacity onPress={() => nav.navigate('Tela-Cadastro')}>
-        <Text style={styles.criarcontalogin}>Não tem uma conta? Clique aqui para criar uma agora.</Text>
-        </TouchableOpacity>
-        <StatusBar style="dark"/>
-      </View>
+      
       <Formik
         initialValues={{email:'', senha: ''}}
         validationSchema={Yup.object({
@@ -61,6 +56,12 @@ export function Login (props: LoginProps) {
           { !isSubmitting && <Button title="Logar" onPress={handleSubmit} buttonStyle={{borderRadius: 30, backgroundColor: '#1C3144', marginTop: 10}}></Button>}
         </View>)}
       </Formik>
+      <View style={styles.container}>
+        <TouchableOpacity onPress={() => nav.navigate('Tela-Cadastro')}>
+        <Text style={styles.criarcontalogin}>Não tem uma conta? Clique aqui para criar uma agora.</Text>
+        </TouchableOpacity>
+        <StatusBar style="dark"/>
+      </View>
       </ImageBackground>
     );
 }
@@ -80,9 +81,9 @@ bolinha: {
 container: {
   flex:1,
   flexDirection: 'column',
-  justifyContent: 'center',
-  padding: 20,
-  alignItems: 'stretch' 
+  justifyContent: 'flex-end',
+  padding: 10,
+  alignItems: 'center' 
 },
 
 texta: {
@@ -95,7 +96,7 @@ texta: {
 },
 
 container2: {
-  flex:1,
+  flex:50,
   flexDirection: 'column',
   justifyContent: 'center',
   padding: 20,
@@ -107,7 +108,6 @@ criarcontalogin: {
   color:'black',
   fontSize: 13.5,
   textAlign: 'center',
-  paddingTop: 1215,
   textDecorationLine: 'underline'
 },
 

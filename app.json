@@ -3,6 +3,16 @@
     "name": "projeto",
     "slug": "projeto",
     "version": "1.0.0",
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "PRECISA DE ACESSO PARA FOTO.",
+          "cameraPermission": "PRECISA DE ACESSO PARA A CAMERA."
+        }
+      ]
+    ],
+    
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {

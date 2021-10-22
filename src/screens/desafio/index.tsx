@@ -5,6 +5,7 @@ import { required } from 'yargs';
 import { Input } from 'react-native-elements/dist/input/Input';
 import { Button } from 'react-native-elements/dist/buttons/Button';
 import { useState } from 'react';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 export interface DesafioProps {
 }
@@ -25,8 +26,20 @@ export function Desafio (props: DesafioProps) {
         <StatusBar style="dark"/>
       </View>
       <View style={styles.container2}>
-        <Text style={styles.text2}>Entrar</Text>
+        <TouchableOpacity>
+        <Image source={require('./../../assets/imgs/nutricionista.png')}
+	      />
+        </TouchableOpacity>
+        <TouchableOpacity>        
+	      <Image source={require('./../../assets/imgs/personal.png')}
+	      />
+        </TouchableOpacity>
+        <TouchableOpacity> 
+	      <Image source={require('./../../assets/imgs/petshop.png')}
+	      />
+        </TouchableOpacity> 
       </View>
+
       </ImageBackground>
     );
 }
@@ -37,13 +50,20 @@ background: {
   height: '100%',  
 },
 
+container2: {
+  flex:2,
+  flexDirection: 'row',
+  justifyContent: 'space-around',
+  alignItems: 'flex-start',
+  padding: 5,  
+},
+
 container: {
   flex:1,
   flexDirection: 'column',
   justifyContent: 'center',
   padding: 20,
-  alignItems: 'stretch',
-  marginBottom: 100 
+  alignItems: 'stretch' 
 },
 
 text1: {
@@ -52,7 +72,9 @@ text1: {
   color:'black',
   fontSize: 20,
   paddingLeft: 20,
-  fontStyle: 'italic'
+  fontStyle: 'italic',
+  marginTop: 50,
+  fontWeight:'bold'
 },
 
 text2: {
@@ -61,17 +83,8 @@ text2: {
     color:'black',
     fontSize: 20,
     paddingLeft: 20,
-    fontStyle: 'italic'
+    fontStyle: 'italic',
   },
-
-container2: {
-  flexDirection: 'column',
-  justifyContent: 'center',
-  padding: 20,
-  paddingBottom: 300
-   
-},
-
 //criarcontalogin: {
 //  color:'black',
 //  fontSize: 13.5,
